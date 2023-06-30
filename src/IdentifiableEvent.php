@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Termyn\Mesh;
+namespace Termyn;
 
-use Termyn\Id;
-
-interface IntegrationEvent
+interface IdentifiableEvent extends Event
 {
     public function id(): Id;
 }

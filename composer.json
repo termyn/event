@@ -1,6 +1,6 @@
 {
-    "name": "termyn/mesh",
-    "description": "IEA based on the Symfony Messenger 6.* and higher",
+    "name": "termyn/event",
+    "description": "EBA based on the Symfony Messenger 6.* and higher",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,18 +14,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Termyn\\Mesh\\": "src/"
+            "Termyn\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Termyn\\Mesh\\Test\\": "tests"
+            "Termyn\\Test\\": "tests"
         }
     },
     "require": {
         "php": "^8.2",
-        "symfony/messenger": "6.*",
-        "symfony/validator": "6.*",
+        "symfony/messenger": "^6",
+        "symfony/validator": "^6",
         "termyn/id": "dev-main",
         "termyn/date-time": "dev-main"
     },

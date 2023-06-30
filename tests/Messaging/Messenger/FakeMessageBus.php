@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Termyn\Mesh\Test\Messaging\Messenger;
+namespace Termyn\Test\Messaging\Messenger;
 
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\MessageBusInterface as MessageBus;
-use Termyn\Mesh\IntegrationEvent;
+use Termyn\Event;
 
 final class FakeMessageBus implements MessageBus
 {
@@ -14,7 +14,7 @@ final class FakeMessageBus implements MessageBus
 
     public function dispatch(object $message, array $stamps = []): Envelope
     {
-        if ($message instanceof IntegrationEvent) {
+        if ($message instanceof Event) {
             $this->dispatchedMessages[] = $message;
         }
 
